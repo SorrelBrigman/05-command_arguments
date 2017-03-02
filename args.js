@@ -2,6 +2,7 @@
 
 let [,,...args] = process.argv;
 let summed = 0;
-args.forEach((value)=>{summed+= parseFloat(value)});
+let numbersArgs = args.map(parseFloat);
+numbersArgs.forEach((value)=>summed+= value);
 
 console.log(`the sum is ${summed}.`)
